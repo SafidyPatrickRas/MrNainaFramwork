@@ -1,14 +1,14 @@
-package src.annotation;
+package com.itu.annotation;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
-
-
-@Target(ElementType.METHOD)
+// Définition de l'annotation Controller
 @Retention(RetentionPolicy.RUNTIME)
-public @interface Url {
-    String value();
-}
+@Target(ElementType.TYPE)
+public @interface Controller {
+    String value() default "";
+}    
+
